@@ -66,7 +66,7 @@ model_config = {
 ### load model
 if model_family == 'convnext':
     model_config["model_name"] = "convnext_base_384_in22ft1k"
-    loaded_model = timm.create_model(model_config["model_name"], pretrained=True)
+    loaded_model = timm.create_model(model_config["model_name"], pretrained=False)
     loaded_model = nn.Sequential(*list(loaded_model.children())[:-2])
     loaded_model = nn.Sequential(loaded_model, Net2Head(model_config["class_n"], model_config["unit_n"], model_config["size"]))
 elif model_family == 'replknet':
@@ -82,7 +82,8 @@ device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 n_gpu = torch.cuda.device_count()
 if n_gpu > 0:
     loaded_model = torch.nn.DataParallel(loaded_model, device_ids=[k for k in range(n_gpu)])
-
+loaded_model.cuda()
+loaded_model.eval()
 
 ### load dataset
 img_transform = transforms.Compose([transforms.Resize((model_config["input_size"], model_config["input_size"])), transforms.ToTensor(), transforms.Normalize((0.5,), (0.5,))])

@@ -27,13 +27,21 @@ We provide our models fine-tuned for CUB-200-2011. Based on several findings, ou
 
 ## Quick start
 
-Command line for generating heatmaps using sample data. You will need to download the weight file specified in fine_tuned_weight_name from here and place it appropriately.
+You can run an example via colab. You will need to download the weight file from [Model Zoo](#model-zoo) (approx. 300 MB).
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/14ckRDKOIctAKePdzeIbaTk4zlGEha_uT?usp=drive_link)
+
+
+
+
+## Usage
+
+Command line for generating heatmaps using sample data. You will need to download the weight file specified in fine_tuned_weight_name from [Model Zoo](#model-zoo) and place it appropriately.
 ```
 python generate_heatmap.py --model_family replknet --fine_tuned_weight_name weights/replknet_31B1K384_CUB.pth --test_dataset sample_data heatmap_output heatmap_output --localization_method pc1
 ```
 
 <!-- ### Requirements -->
-
 
 
 ## Citation
@@ -50,4 +58,3 @@ If you found our paper or code useful, please cite it as:
   url={}
 }
 ```
-

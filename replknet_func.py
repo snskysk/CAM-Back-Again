@@ -355,11 +355,11 @@ def create_RepLKNetXL(drop_path_rate=0.3, num_classes=1000, use_checkpoint=True,
 
 def build_model(model_config, fine_tuned_weights=None):
     # モデルの定義
-    if model_config.model_name == "RepLKNet-31B":
+    if model_config["model_name"] == "RepLKNet-31B":
         model = create_RepLKNet31B(small_kernel_merged=False, use_sync_bn=False)
-    if model_config.model_name == "RepLKNet-31L":
+    if model_config["model_name"] == "RepLKNet-31L":
         model = create_RepLKNet31L(small_kernel_merged=False, use_sync_bn=False)
-    if model_config.model_name == "RepLKNet-XL":
+    if model_config["model_name"] == "RepLKNet-XL":
         model = create_RepLKNetXL(small_kernel_merged=False, use_sync_bn=False)
 
     # CAM化

@@ -136,7 +136,7 @@ def get_heatmap_from_features(localization_method, features, model_config, n_com
         heatmap = heatmap / torch.max(heatmap)
         heatmap = heatmap.numpy()
 
-    if localization_method == "pca":
+    if localization_method == "pc1":
         fmap_side = model_config["size"]
         features = features.cpu().numpy()
         features = features[0]

@@ -1,4 +1,4 @@
-weights/
+weights/*.pth
 edit_table.xlsx
 local_note.md
 sample_data_preparation.py

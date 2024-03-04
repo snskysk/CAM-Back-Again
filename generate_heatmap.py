@@ -127,6 +127,7 @@ for img_n, (x, labels) in enumerate(data_loader_test):
     superimposed_img = np.uint8(255 * superimposed_img / np.max(superimposed_img))
     superimposed_img = cv2.cvtColor(superimposed_img, cv2.COLOR_BGR2RGB)
     plt.imshow(superimposed_img)
+    plt.axis("off")
     plt.savefig(heatmap_output_dir + "heatmap_{}.png".format("0000000"[:-len(str(img_n))] + str(img_n)))
     plt.close()
 

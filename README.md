@@ -32,6 +32,7 @@ You can run an example via colab. You will need to download the weight file from
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/14ckRDKOIctAKePdzeIbaTk4zlGEha_uT?usp=drive_link)
 
 
+![head_img](img/center_img.png)
 
 
 ## Usage

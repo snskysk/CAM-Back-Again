@@ -42,6 +42,7 @@ Command line for generating heatmaps using sample data. You will need to downloa
 python generate_heatmap.py --model_family replknet --fine_tuned_weight_name weights/replknet_31B1K384_CUB.pth --test_dataset sample_data heatmap_output heatmap_output --localization_method pc1
 ```
 
+More details will be added.
 <!-- ### Requirements -->
 
 

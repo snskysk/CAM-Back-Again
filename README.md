@@ -2,9 +2,18 @@
 
 **[CVPR 2024] CAM Back Again**: Large Kernel CNNs from a Weakly Supervised Object Localization Perspective
 ========
+[![CVPR - 2024](https://img.shields.io/badge/CVPR-2024-1B427D)](https://cvpr.thecvf.com/)
 
 This is the project page for paper:
 > [CAM Back Again: Large Kernel CNNs from a Weakly Supervised Object Localization Perspective](), in CVPR2024.
+
+Created by
+
+- [Shunsuke Yasuki](https://snskysk.github.io/)
+- [Masato Taki](https://scholar.google.com/citations?hl=en&user=3nMhvfgAAAAJ)
+
+Organization
+- [![Rikkyo University](https://img.shields.io/badge/Rikkyo-University-FFFFFF?style=plastic&labelColor=582780)](https://www.rikkyo.ac.jp)
 
 ![head_img](img/head_img.png)
 

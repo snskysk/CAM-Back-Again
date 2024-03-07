@@ -335,7 +335,6 @@ class RepLKNet(nn.Module):
                 m[1] = nn.Identity()
 
 
-# use_sync_bn設定を追加
 def create_RepLKNet31B(drop_path_rate=0.3, num_classes=1000, use_checkpoint=True, small_kernel_merged=False, use_sync_bn=True):
     return RepLKNet(large_kernel_sizes=[31,29,27,13], layers=[2,2,18,2], channels=[128,256,512,1024],
                     drop_path_rate=drop_path_rate, small_kernel=5, num_classes=num_classes, use_checkpoint=use_checkpoint,
@@ -354,7 +353,6 @@ def create_RepLKNetXL(drop_path_rate=0.3, num_classes=1000, use_checkpoint=True,
 
 
 def build_model(model_config, fine_tuned_weights=None):
-    # モデルの定義
     if model_config["model_name"] == "RepLKNet-31B":
         model = create_RepLKNet31B(small_kernel_merged=False, use_sync_bn=False)
     if model_config["model_name"] == "RepLKNet-31L":
@@ -362,7 +360,6 @@ def build_model(model_config, fine_tuned_weights=None):
     if model_config["model_name"] == "RepLKNet-XL":
         model = create_RepLKNetXL(small_kernel_merged=False, use_sync_bn=False)
 
-    # CAM化
     num_classes = model_config["class_n"]
     model.head = nn.Linear(model_config["channels"][-1], num_classes)
 

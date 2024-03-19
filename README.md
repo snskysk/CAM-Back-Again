@@ -6,7 +6,7 @@
 [![arXiv](https://img.shields.io/badge/arXiv-2403.06676-b31b1b.svg?style=plastic)](https://arxiv.org/abs/2403.06676)
 
 This is the project page for paper:
-> [CAM Back Again: Large Kernel CNNs from a Weakly Supervised Object Localization Perspective](), in CVPR2024.
+> [CAM Back Again: Large Kernel CNNs from a Weakly Supervised Object Localization Perspective](https://arxiv.org/abs/2403.06676), in CVPR2024.
 
 Created by
 
@@ -67,6 +67,6 @@ If you found our paper or code useful, please cite it as:
   author={Yasuki, Shunsuke and Taki, Masato},
   booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
   year={2024},
-  url={}
+  url={https://arxiv.org/abs/2403.06676}
 }
 ```
